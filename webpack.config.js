@@ -1,27 +1,26 @@
-const path = require("path");
-const webpack = require("webpack");
-const { DefinePlugin } = require("webpack");
+const path = require('path');
+const { HotModuleReplacementPlugin, DefinePlugin } = require('webpack');
 
 module.exports = {
-  entry: "./src/index.js",
-  mode: "development",
+  entry: './src/index.js',
+  mode: 'development',
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
-        loader: "babel-loader",
-        options: { presets: ["@babel/env"] }
+        loader: 'babel-loader',
+        options: { presets: ['@babel/env'] }
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ['style-loader', 'css-loader']
       },
       {
           test: /\.svg/,
           use: [
               {
-                  loader: "svg-url-loader",
+                  loader: 'svg-url-loader',
                   options: {
                       limit: 1024
                   }
@@ -30,21 +29,21 @@ module.exports = {
       }
     ]
   },
-  resolve: { extensions: ["*", ".js", ".jsx"] },
+  resolve: { extensions: ['*', '.js', '.jsx'] },
   output: {
-    path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
-    filename: "bundle.js"
+    path: path.resolve(__dirname, 'dist/'),
+    publicPath: '/dist/',
+    filename: 'bundle.js'
   },
   devServer: {
-    contentBase: path.join(__dirname, "public/"),
+    contentBase: path.join(__dirname, 'public/'),
     port: 3000,
-    publicPath: "http://localhost:3000/dist/",
+    publicPath: 'http://localhost:3000/dist/',
     hotOnly: true
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
+    new HotModuleReplacementPlugin(),
+    new DefinePlugin({
       BASE_URL: JSON.stringify('https://jsonplaceholder.typicode.com/'),
       ALBUM_ENDPOINT_URL: JSON.stringify('https://jsonplaceholder.typicode.com/albums'),
       ALBUM_ART_ENDPOINT_URL: JSON.stringify('https://jsonplaceholder.typicode.com/photos')

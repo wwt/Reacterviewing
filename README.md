@@ -8,7 +8,7 @@ Your mission, should you choose to accept it, is to show album titles and images
 BUSINESS REQUIREMENTS:
 - Remove all occurances of the letter "e" (case-insensitive) from album titles
 
-You are free to change *anything* about the current code so long as you accomplish this goal. Make it read and function the way you want it to, but bear in mind we’re looking for people who understand what best industry practices look like in Kotlin.
+You are free to change *anything* about the current code so long as you accomplish this goal. Make it read and function the way you want it to, but bear in mind we’re looking for people who understand what best industry practices look like in React.
 
 NOTE: The code in its current state does not compile, _that's on purpose:_ on a real-world project you might need to pick up code from another member of your team and continue from where they left off, and they may not have completed their thought.
 

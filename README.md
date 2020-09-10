@@ -6,7 +6,7 @@ If you're applying for a React development position at World Wide Technology App
 Your mission, should you choose to accept it, is to show album titles and images in a list view. The album title and image should be retrieved from [https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/). The project already contains a base URL (the one above!) and endpoint URLs for this task.
 
 BUSINESS REQUIREMENTS:
-- Remove all occurances of the letter "e" (case-insensitive) from album titles
+- Remove all occurences of the letter "e" (case-insensitive) from album titles
 
 You are free to change *anything* about the current code so long as you accomplish this goal. Make it read and function the way you want it to, but bear in mind we’re looking for people who understand what best industry practices look like in React.
 
